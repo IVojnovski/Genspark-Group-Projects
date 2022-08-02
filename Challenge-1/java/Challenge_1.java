@@ -2,6 +2,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Scanner;
 
 // 2 columns displayed max == 7 items
 // items amount > 0 && items amount <= 8
@@ -22,10 +23,23 @@ import java.util.List;
 public class Challenge_1 {
 	public static void main (String args[]) {
 		try {
-			List<String> lines = Files.readAllLines(Paths.get("C:\\Genspark-Group-Projects\\Challenge-1\\challenge-1.txt"),
-					StandardCharsets.UTF_8); //this is the stream from the text file put into a List
-			int size = lines.size(); //size of the list
-			format(size, lines); //function that formats all of the list contents from the file stream and prints them in the column format
+			Scanner sc = new Scanner(System.in);
+			System.out.println("Would you like to test input 1 with 2 columns OR input 2 with 3 columns? (type 1 for input 1 and 2 for input 2)");
+			int choice = sc.nextInt();
+			// handle exception allow reinput
+			String filePath25 = "C:\\Genspark-Group-Projects\\Challenge-1\\challenge-1.txt";
+			String filePath7 = "C:\\Genspark-Group-Projects\\Challenge-1\\challenge-1-7.txt";
+			if (choice == 1) {
+				List<String> lines = Files.readAllLines(Paths.get(filePath7), StandardCharsets.UTF_8); //this is the stream from the text file put into a List
+				int size = lines.size(); //size of the list
+				format(size, lines); //function that formats all of the list contents from the file stream and prints them in the column format
+			}
+			if (choice == 2) {
+				List<String> lines = Files.readAllLines(Paths.get(filePath25), StandardCharsets.UTF_8); //this is the stream from the text file put into a List
+				int size = lines.size(); //size of the list
+				format(size, lines); //function that formats all of the list contents from the file stream and prints them in the column format
+			}
+			sc.close();
 		}
 		catch (Exception e) {
 			throw new RuntimeException(e);
@@ -50,4 +64,5 @@ public class Challenge_1 {
 			System.out.printf("%-15s%-15s\n", list.get(8), list.get(17));
 		}
 	}
+	
 }
