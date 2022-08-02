@@ -1,7 +1,9 @@
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Scanner;
 
 // 2 columns displayed max == 7 items
 // items amount > 0 && items amount <= 8
@@ -30,6 +32,7 @@ public class Challenge_1 {
 		catch (Exception e) {
 			throw new RuntimeException(e);
 		}
+
 	}
 	static void format (int size, List<String> list) {
 		if (size <= 8) {
@@ -49,5 +52,10 @@ public class Challenge_1 {
 			System.out.printf("%-15s%-15s\n", list.get(7), list.get(16));
 			System.out.printf("%-15s%-15s\n", list.get(8), list.get(17));
 		}
+	}
+	public void writeToAFile() throws IOException {
+		Scanner sc = new Scanner(System.in);
+		String input = sc.nextLine();
+		Files.write(Paths.get("C:\\Genspark-Group-Projects\\Challenge-1\\challenge-1.txt"), input.getBytes(StandardCharsets.UTF_8));
 	}
 }
