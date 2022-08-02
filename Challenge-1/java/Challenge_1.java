@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -44,6 +45,7 @@ public class Challenge_1 {
 		catch (Exception e) {
 			throw new RuntimeException(e);
 		}
+
 	}
 	static void format (int size, List<String> list) {
 		if (size <= 8) {
