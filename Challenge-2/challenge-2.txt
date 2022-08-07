@@ -3,10 +3,8 @@ Java: Did you Know That?   30min
 Fun path to Java SE 11 Developer Certifications   60min
 Memory Efficient Java   45min
 Discover Modern Java   45min
-Ten Cool Things you might not know about the OpenJDK Java Virtual
-Machine   30min
-Effective Java SE 9 through 14 APIs/Lang features, makes your life
-easier.   60min
+Ten Cool Things you might not know about the OpenJDK Java Virtual Machine   30min
+Effective Java SE 9 through 14 APIs/Lang features, makes your life easier.   60min
 This Ain\u2019t Your Parents Java   30min
 Improving Startup for Java Analytical Workload   60min
 Human Readable Javascript   30min
