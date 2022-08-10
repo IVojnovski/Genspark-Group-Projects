@@ -42,6 +42,7 @@ public class Challenge_1 {
 			}
 			sc.close();
 		}
+
 		catch (Exception e) {
 			throw new RuntimeException(e);
 		}
