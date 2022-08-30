@@ -1,10 +1,10 @@
-package com.group.awsblogs;
+package com.blog.awsblogupload;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AwsBlogsApplicationTests {
+class AwsBlogUploadApplicationTests {
 
 	@Test
 	void contextLoads() {

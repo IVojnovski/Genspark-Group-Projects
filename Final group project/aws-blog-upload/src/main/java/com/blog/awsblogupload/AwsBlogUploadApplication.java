@@ -1,13 +1,13 @@
-package com.group.awsblogs;
+package com.blog.awsblogupload;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AwsBlogsApplication {
+public class AwsBlogUploadApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AwsBlogsApplication.class, args);
+		SpringApplication.run(AwsBlogUploadApplication.class, args);
 	}
 
 }
