@@ -14,8 +14,8 @@ public class FakeUserProfileData {
     private static final List<UserProfile> USER_PROFILES = new ArrayList<>();
 
     static {
-        USER_PROFILES.add(new UserProfile(UUID.randomUUID(), "janetjones", null));
-        USER_PROFILES.add(new UserProfile(UUID.randomUUID(), "antoniojunior", null));
+        USER_PROFILES.add(new UserProfile(UUID.fromString("efc1879d-8458-4000-8a8e-a095f8847e11"), "janetjones", null));
+        USER_PROFILES.add(new UserProfile(UUID.fromString("4c9ce5a2-598d-46f8-a022-682bca848e8e"), "antoniojunior", null));
     }
     public List<UserProfile> getUserProfiles(){
         return USER_PROFILES;

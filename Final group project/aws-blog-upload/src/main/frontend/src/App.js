@@ -6,7 +6,7 @@ import Dropzone, {useDropzone} from 'react-dropzone'
 
 const UserProfiles = () => {
 
-  const [UserProfiles, setUserProfiles] = useState([]);
+  const [userProfiles, setUserProfiles] = useState([]);
 
   const fetchUserProfiles = () => {
     axios.get("http://localhost:8080/api/v1/user-profile").then(res => {
@@ -18,22 +18,22 @@ const UserProfiles = () => {
   useEffect(()=>{
     fetchUserProfiles();
   }, []);
-  return UserProfiles.map((UserProfile, index)=>{
+  return userProfiles.map((userProfile, index)=>{
     return(
       <div key={index}>
         {/*todo: profile image*/}
         <br/>
         <br/>
-        <h1>{UserProfile.username}</h1>
-        <p>{UserProfile.userProfileId}</p>
-        <MyDropzone  {...UserProfile}/>
+        <h1>{userProfile.username}</h1>
+        <p>{userProfile.userProfileId}</p>
+        <MyDropzone  {...userProfile}/>
         <br/>
       </div>
     )
   })
 };
 
-function MyDropzone({userProfileId}) {
+function MyDropzone({ userProfileId }) {
   const onDrop = useCallback(acceptedFiles => {
     const file = acceptedFiles[0];
     console.log(file);
